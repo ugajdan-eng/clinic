@@ -23,12 +23,12 @@
 [data-theme=light]{--bg:var(--cream);--bg2:var(--cream2);--bg3:#fff;
   --text:#1A1D28;--muted:#5A5E72;--brd:rgba(201,151,74,.28);
   --glass:rgba(251,247,242,.85);--cbg:rgba(255,255,255,.92);}
- 
+
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--ff-b);background:var(--bg);color:var(--text);overflow-x:hidden;transition:background var(--ease),color var(--ease);}
 a{text-decoration:none;color:inherit;}
- 
+
 /* LOADER */
 #loader{position:fixed;inset:0;z-index:9999;background:var(--deep);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:20px;transition:opacity .6s,visibility .6s;}
 #loader.out{opacity:0;visibility:hidden;}
@@ -37,23 +37,23 @@ a{text-decoration:none;color:inherit;}
 .ld-bar{width:200px;height:2px;background:rgba(255,255,255,.08);border-radius:2px;overflow:hidden;}
 .ld-bar::after{content:'';display:block;width:45%;height:100%;background:linear-gradient(90deg,var(--gold),var(--rose),var(--teal2));animation:ldsw 1.4s ease infinite;}
 @keyframes ldsw{0%{transform:translateX(-120%);}100%{transform:translateX(380%);}}
- 
+
 /* FLOATING WA */
 .wa-float{position:fixed;bottom:28px;right:28px;z-index:1000;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#25D366,#128C7E);display:flex;align-items:center;justify-content:center;box-shadow:0 6px 28px rgba(37,211,102,.45);animation:wab 2.4s ease infinite;transition:transform .3s,box-shadow .3s;}
 .wa-float:hover{transform:scale(1.13);box-shadow:0 12px 36px rgba(37,211,102,.6);}
 @keyframes wab{0%,100%{transform:translateY(0);}50%{transform:translateY(-7px);}}
 .wa-float svg{width:32px;height:32px;fill:#fff;}
- 
+
 /* SCROLL TOP */
 #scrollTop{position:fixed;bottom:102px;right:28px;z-index:1000;width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--gold),var(--rose));border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:opacity .3s,visibility .3s,transform .3s;box-shadow:0 4px 16px rgba(196,96,122,.35);}
 #scrollTop.show{opacity:1;visibility:visible;}
 #scrollTop:hover{transform:translateY(-4px);}
 #scrollTop svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.5;}
- 
+
 /* TOAST */
 #toast{position:fixed;bottom:30px;left:50%;transform:translateX(-50%) translateY(90px);background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;padding:14px 30px;border-radius:100px;font-weight:700;font-size:.95rem;z-index:2001;transition:transform .4s cubic-bezier(.34,1.56,.64,1);pointer-events:none;}
 #toast.show{transform:translateX(-50%) translateY(0);}
- 
+
 /* NAVBAR */
 #nav{position:fixed;top:0;left:0;right:0;z-index:800;height:var(--nav);padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:var(--glass);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-bottom:1px solid var(--brd);transition:box-shadow var(--ease);}
 #nav.scrolled{box-shadow:0 4px 40px rgba(0,0,0,.22);}
@@ -68,7 +68,7 @@ a{text-decoration:none;color:inherit;}
 .lang-sw{display:flex;gap:3px;}
 .lang-btn{padding:4px 9px;font-size:.7rem;font-family:var(--ff-b);font-weight:700;letter-spacing:.06em;border:1px solid var(--brd);border-radius:5px;background:transparent;color:var(--muted);cursor:pointer;transition:all .25s;}
 .lang-btn.on{background:linear-gradient(135deg,var(--gold),var(--rose));color:#fff;border-color:transparent;}
- 
+
 /* THEME TOGGLE — sun/moon */
 .theme-wrap{display:flex;align-items:center;gap:7px;cursor:pointer;user-select:none;}
 .theme-icon{font-size:1rem;line-height:1;transition:transform .35s;}
@@ -77,7 +77,7 @@ a{text-decoration:none;color:inherit;}
 [data-theme=light] .theme-tog::after{transform:translateX(17px);}
 .theme-icon-moon{opacity:1;transition:opacity .3s;}
 .theme-icon-sun{opacity:1;transition:opacity .3s;}
- 
+
 .nav-cta{padding:9px 22px;background:linear-gradient(135deg,var(--gold),var(--rose));color:#fff;border-radius:8px;font-size:.8rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;transition:transform .25s,box-shadow .25s;white-space:nowrap;}
 .nav-cta:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(196,96,122,.45);}
 .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:4px;}
@@ -90,7 +90,7 @@ a{text-decoration:none;color:inherit;}
 .mob-menu ul{list-style:none;display:flex;flex-direction:column;gap:18px;}
 .mob-menu a{font-size:1rem;font-weight:600;color:var(--muted);}
 .mob-menu a:hover{color:var(--gold);}
- 
+
 /* HERO */
 #hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:calc(var(--nav) + 60px) 8% 80px;}
 .hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse 70% 60% at 70% 35%,rgba(201,151,74,.16) 0%,transparent 65%),radial-gradient(ellipse 50% 70% at 20% 75%,rgba(196,96,122,.12) 0%,transparent 60%),radial-gradient(ellipse 40% 40% at 85% 80%,rgba(45,140,140,.1) 0%,transparent 55%),var(--bg);}
@@ -119,7 +119,7 @@ a{text-decoration:none;color:inherit;}
 .btn-g.teal{background:linear-gradient(135deg,var(--teal),var(--teal2));color:#fff;}
 .btn-g.teal:hover{transform:translateY(-3px);box-shadow:0 12px 32px rgba(45,140,140,.4);}
 @keyframes fup{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
- 
+
 /* Hero card */
 .hero-card{position:absolute;right:6%;top:50%;transform:translateY(-50%);width:min(420px,40vw);animation:cardin 1s .2s ease both;}
 @keyframes cardin{from{opacity:0;transform:translate(40px,-50%);}to{opacity:1;transform:translate(0,-50%);}}
@@ -132,7 +132,7 @@ a{text-decoration:none;color:inherit;}
 .hc-tag{padding:6px 12px;background:rgba(201,151,74,.1);border:1px solid rgba(201,151,74,.22);border-radius:100px;font-size:.7rem;color:var(--gold);letter-spacing:.04em;}
 .hc-tag.rose{background:rgba(196,96,122,.1);border-color:rgba(196,96,122,.22);color:var(--rose);}
 .hc-tag.teal{background:rgba(45,140,140,.1);border-color:rgba(45,140,140,.22);color:var(--teal2);}
- 
+
 /* SECTIONS */
 section{padding:96px 8%;}
 .s-tag{display:inline-flex;align-items:center;gap:10px;font-size:.7rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
@@ -144,7 +144,7 @@ section{padding:96px 8%;}
 .reveal{opacity:0;transform:translateY(36px);transition:opacity .7s ease,transform .7s ease;}
 .reveal.vis{opacity:1;transform:translateY(0);}
 .d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}
- 
+
 /* ABOUT */
 #about{background:var(--bg2);}
 .about-g{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center;}
@@ -155,7 +155,7 @@ section{padding:96px 8%;}
 .stat-c:hover{transform:translateY(-6px);box-shadow:0 16px 40px rgba(0,0,0,.14);}
 .stat-n{font-family:var(--ff-h);font-size:2.7rem;font-weight:700;line-height:1;background:linear-gradient(135deg,var(--gold),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;}
 .stat-l{font-size:.8rem;color:var(--muted);margin-top:8px;line-height:1.4;}
- 
+
 /* DOCTORS */
 #doctors{background:var(--bg);}
 .docs-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:24px;}
@@ -172,7 +172,7 @@ section{padding:96px 8%;}
 .doc-desc{font-size:.84rem;color:var(--muted);line-height:1.68;margin-bottom:16px;}
 .doc-tags{display:flex;flex-wrap:wrap;gap:6px;}
 .doc-tag{padding:4px 10px;background:rgba(201,151,74,.09);border:1px solid rgba(201,151,74,.2);border-radius:100px;font-size:.68rem;color:var(--gold);}
- 
+
 /* SERVICES */
 .svcs-g{display:grid;grid-template-columns:repeat(auto-fill,minmax(275px,1fr));gap:22px;}
 .svc{background:var(--cbg);backdrop-filter:blur(12px);border:1px solid var(--brd);border-radius:22px;padding:34px 26px;position:relative;overflow:hidden;cursor:pointer;transition:transform .3s,box-shadow .3s,border-color .3s;}
@@ -189,7 +189,7 @@ section{padding:96px 8%;}
 .btn-svc:hover,.svc:hover .btn-svc{border-color:var(--gold);color:var(--gold);}
 .btn-svc svg{width:15px;height:15px;stroke:currentColor;fill:none;transition:transform .3s;}
 .svc:hover .btn-svc svg{transform:translateX(4px);}
- 
+
 /* REVIEWS */
 #reviews{background:var(--bg2);}
 .rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(340px,1fr));gap:20px;margin-bottom:36px;}
@@ -204,7 +204,7 @@ section{padding:96px 8%;}
 .rev-badge{display:inline-block;padding:3px 10px;border-radius:100px;font-size:.65rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;margin-top:12px;}
 .rb-good{background:rgba(45,140,140,.14);color:var(--teal2);border:1px solid rgba(45,140,140,.2);}
 .rb-bad{background:rgba(196,96,122,.1);color:var(--rose);border:1px solid rgba(196,96,122,.2);}
- 
+
 /* MAP */
 .map-g{display:grid;grid-template-columns:1fr 1.4fr;gap:56px;align-items:start;}
 .branch{display:flex;gap:14px;padding:22px;background:var(--cbg);border:1px solid var(--brd);border-radius:16px;margin-bottom:14px;transition:border-color .3s,transform .3s;}
@@ -216,7 +216,7 @@ section{padding:96px 8%;}
 .b-hrs{font-size:.76rem;color:var(--teal2);margin-top:5px;font-weight:600;}
 .map-fr{border-radius:22px;overflow:hidden;border:1px solid var(--brd);height:400px;}
 .map-fr iframe{width:100%;height:100%;border:none;}
- 
+
 /* SOCIAL */
 #social{background:var(--bg2);}
 .soc-g{display:flex;flex-wrap:wrap;gap:18px;justify-content:center;}
@@ -230,7 +230,7 @@ section{padding:96px 8%;}
 .soc-c.soc-wa:hover{border-color:rgba(37,211,102,.4);}
 .soc-c.soc-ph:hover{border-color:rgba(45,140,140,.4);}
 .soc-c.soc-gis:hover{border-color:rgba(0,179,0,.4);}
- 
+
 /* CONTACT */
 .contact-g{display:grid;grid-template-columns:1fr 1.2fr;gap:56px;align-items:start;}
 .c-item{display:flex;align-items:flex-start;gap:14px;margin-bottom:26px;}
@@ -254,7 +254,7 @@ section{padding:96px 8%;}
 .btn-submit{width:100%;padding:14px;background:linear-gradient(135deg,var(--gold),var(--rose));color:#fff;border:none;border-radius:12px;font-size:.9rem;font-weight:700;letter-spacing:.06em;cursor:pointer;transition:transform .3s,box-shadow .3s;display:flex;align-items:center;justify-content:center;gap:8px;}
 .btn-submit:hover{transform:translateY(-2px);box-shadow:0 10px 28px rgba(196,96,122,.4);}
 .btn-submit svg{width:18px;height:18px;fill:white;flex-shrink:0;}
- 
+
 /* FOOTER */
 footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
 .foot-g{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:44px;margin-bottom:44px;}
@@ -269,7 +269,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
 .foot-links a:hover{color:var(--gold);}
 .foot-bottom{border-top:1px solid rgba(255,255,255,.07);padding-top:26px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px;}
 .foot-copy{font-size:.78rem;}
- 
+
 /* RESPONSIVE */
 @media(max-width:1100px){.hero-card{display:none;}.about-g{grid-template-columns:1fr;gap:36px;}.map-g{grid-template-columns:1fr;}.contact-g{grid-template-columns:1fr;}.foot-g{grid-template-columns:1fr 1fr;}}
 @media(max-width:768px){section{padding:68px 6%;}.nav-links,.nav-cta,.lang-sw{display:none;}.hamburger{display:flex;}.stats-g{grid-template-columns:1fr 1fr;}.svcs-g{grid-template-columns:1fr;}.form-row{grid-template-columns:1fr;}.foot-g{grid-template-columns:1fr;}.foot-bottom{flex-direction:column;text-align:center;}.rev-grid{grid-template-columns:1fr;}.soc-g{gap:12px;}.docs-g{grid-template-columns:1fr 1fr;}}
@@ -277,24 +277,24 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
 </style>
 </head>
 <body data-theme="dark">
- 
+
 <!-- LOADER -->
 <div id="loader">
   <div class="ld-logo">Soffiel Clinique</div>
   <div class="ld-bar"></div>
 </div>
- 
+
 <!-- FLOATING WA -->
 <a class="wa-float" href="https://wa.me/+77758882288?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию%20в%20Soffiel%20Clinique." target="_blank" rel="noopener" title="WhatsApp">
   <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
- 
+
 <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">
   <svg viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
 </button>
- 
+
 <div id="toast"></div>
- 
+
 <!-- NAVBAR -->
 <nav id="nav">
   <div class="nav-logo">Soffiel<span> Clinique</span></div>
@@ -322,7 +322,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     <button class="hamburger" id="hbg" onclick="toggleMenu()"><span></span><span></span><span></span></button>
   </div>
 </nav>
- 
+
 <div class="mob-menu" id="mobMenu">
   <ul>
     <li><a href="#about" onclick="toggleMenu()" data-i="nav.about">О нас</a></li>
@@ -340,7 +340,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     </li>
   </ul>
 </div>
- 
+
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
@@ -375,7 +375,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     </div>
   </div>
 </section>
- 
+
 <!-- ABOUT -->
 <section id="about">
   <div class="about-g">
@@ -394,16 +394,16 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     </div>
   </div>
 </section>
- 
+
 <div class="divider"></div>
- 
+
 <!-- DOCTORS -->
 <section id="doctors">
   <div class="s-tag reveal" data-i="doc.tag">Наши врачи</div>
   <h2 class="s-h2 reveal"><span data-i="doc.h1">Команда </span><span class="g" data-i="doc.h2">профессионалов</span></h2>
   <p class="s-sub reveal" data-i="doc.sub">Каждый врач — специалист международного уровня с многолетним опытом и подтверждёнными результатами.</p>
   <div class="docs-g">
- 
+
     <div class="doc-c reveal d1">
       <div class="doc-photo">
         <div class="doc-photo-placeholder">
@@ -423,7 +423,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
         </div>
       </div>
     </div>
- 
+
     <div class="doc-c reveal d2">
       <div class="doc-photo">
         <div class="doc-photo-placeholder">
@@ -443,7 +443,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
         </div>
       </div>
     </div>
- 
+
     <div class="doc-c reveal d3">
       <div class="doc-photo">
         <div class="doc-photo-placeholder">
@@ -463,7 +463,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
         </div>
       </div>
     </div>
- 
+
     <div class="doc-c reveal d4">
       <div class="doc-photo">
         <div class="doc-photo-placeholder">
@@ -483,19 +483,19 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
         </div>
       </div>
     </div>
- 
+
   </div>
 </section>
- 
+
 <div class="divider"></div>
- 
+
 <!-- SERVICES -->
 <section id="services">
   <div class="s-tag reveal" data-i="svc.tag">Услуги</div>
   <h2 class="s-h2 reveal"><span data-i="svc.h1">Наши </span><span class="g" data-i="svc.h2">специализации</span></h2>
   <p class="s-sub reveal" data-i="svc.sub">Широкий спектр хирургических и эстетических процедур с индивидуальным подходом к каждому пациенту.</p>
   <div class="svcs-g">
- 
+
     <div class="svc reveal d1">
       <div class="svc-ico">🏋️</div>
       <div class="svc-n" data-i="proc.abdomen">Абдоминопластика</div>
@@ -503,7 +503,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 350 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Абдоминопластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d2">
       <div class="svc-ico">👁️</div>
       <div class="svc-n" data-i="proc.bleph">Блефаропластика</div>
@@ -511,7 +511,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 180 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Блефаропластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d3">
       <div class="svc-ico">💧</div>
       <div class="svc-n" data-i="proc.lipo">Липосакция</div>
@@ -519,7 +519,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 250 000 ₸ <small data-i="price.zone">/ зона</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Липосакция.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d1">
       <div class="svc-ico">✨</div>
       <div class="svc-n" data-i="proc.mammo">Маммопластика</div>
@@ -527,7 +527,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 450 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Маммопластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d2">
       <div class="svc-ico">🌿</div>
       <div class="svc-n" data-i="proc.cosm">Косметология</div>
@@ -535,7 +535,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 30 000 ₸ <small data-i="price.proc">/ процедура</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Косметология.%20Хочу%20записаться." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d3">
       <div class="svc-ico">👂</div>
       <div class="svc-n" data-i="proc.oto">Отопластика</div>
@@ -543,7 +543,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 200 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Отопластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d1">
       <div class="svc-ico">🔬</div>
       <div class="svc-n" data-i="proc.rhino">Ринопластика</div>
@@ -551,7 +551,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 400 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20Ринопластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d2">
       <div class="svc-ico">♀️</div>
       <div class="svc-n" data-i="proc.intimate.f">Женская интимная пластика</div>
@@ -559,7 +559,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 280 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20женская%20интимная%20пластика.%20Хочу%20записаться%20на%20консультацию." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
     <div class="svc reveal d3">
       <div class="svc-ico">♂️</div>
       <div class="svc-n" data-i="proc.intimate.m">Мужская интимная пластика</div>
@@ -567,12 +567,12 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="svc-p"><span data-i="price.from">от</span> 300 000 ₸ <small data-i="price.per">/ операция</small></div>
       <a class="btn-svc" href="https://wa.me/+77758882288?text=Здравствуйте!%20Меня%20интересует%20мужская%20интимная%20пластика.%20Хочу%20записаться." target="_blank" rel="noopener" data-i="btn.consult">Консультация <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg></a>
     </div>
- 
+
   </div>
 </section>
- 
+
 <div class="divider"></div>
- 
+
 <!-- REVIEWS -->
 <section id="reviews">
   <div style="text-align:center;margin-bottom:56px;">
@@ -598,7 +598,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     <a class="btn-g fill" href="https://maps.google.com/?q=Soffiel+Clinique+Astana" target="_blank" rel="noopener" data-i="rev.more">Все отзывы в Google Maps →</a>
   </div>
 </section>
- 
+
 <!-- MAP / BRANCHES -->
 <section id="branches">
   <div class="s-tag reveal" data-i="br.tag">Адреса</div>
@@ -631,9 +631,9 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     </div>
   </div>
 </section>
- 
+
 <div class="divider"></div>
- 
+
 <!-- SOCIAL -->
 <section id="social">
   <div style="text-align:center;margin-bottom:56px;">
@@ -642,7 +642,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     <p style="color:var(--muted);font-size:.93rem;max-width:480px;margin:0 auto;" class="reveal" data-i="soc.sub">Результаты до/после, акции, полезные материалы о процедурах</p>
   </div>
   <div class="soc-g">
- 
+
     <!-- Instagram — real logo SVG -->
     <a class="soc-c soc-ig reveal d1" href="https://instagram.com/soffiel.clinique" target="_blank" rel="noopener">
       <div class="soc-ico">
@@ -664,7 +664,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="soc-n">Instagram</div>
       <div class="soc-h">@soffiel.clinique</div>
     </a>
- 
+
     <!-- WhatsApp — real logo SVG -->
     <a class="soc-c soc-wa reveal d2" href="https://wa.me/+77758882288?text=Здравствуйте!%20Хочу%20записаться%20на%20консультацию%20в%20Soffiel%20Clinique." target="_blank" rel="noopener">
       <div class="soc-ico">
@@ -676,7 +676,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="soc-n">WhatsApp</div>
       <div class="soc-h">+7 (775) 888-22-88</div>
     </a>
- 
+
     <!-- Phone — custom icon -->
     <a class="soc-c soc-ph reveal d3" href="tel:+77172565555">
       <div class="soc-ico">
@@ -689,7 +689,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="soc-n" data-i="soc.call">Позвонить</div>
       <div class="soc-h">+7 (7172) 56-55-55</div>
     </a>
- 
+
     <!-- 2GIS logo -->
     <a class="soc-c soc-gis reveal d4" href="https://2gis.kz/astana/search/Soffiel%20Clinique" target="_blank" rel="noopener">
       <div class="soc-ico">
@@ -705,10 +705,10 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
       <div class="soc-n">2GIS</div>
       <div class="soc-h" data-i="soc.map">Найти на карте</div>
     </a>
- 
+
   </div>
 </section>
- 
+
 <!-- CONTACT -->
 <section id="contact" style="background:var(--bg2);">
   <div class="s-tag reveal" data-i="con.tag">Контакты</div>
@@ -735,7 +735,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
         </a>
       </div>
     </div>
- 
+
     <div class="form-box reveal d2">
       <div class="form-title" data-i="form.title">Оставьте заявку</div>
       <div class="form-row">
@@ -758,7 +758,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     </div>
   </div>
 </section>
- 
+
 <!-- FOOTER -->
 <footer>
   <div class="foot-g">
@@ -812,7 +812,7 @@ footer{background:var(--deep);color:rgba(255,255,255,.45);padding:60px 8% 30px;}
     <p style="font-size:.76rem;" data-i="foot.license">Лицензия на медицинскую деятельность. Имеются противопоказания.</p>
   </div>
 </footer>
- 
+
 <script>
 /* =====================================================
    TRANSLATIONS
@@ -1023,16 +1023,16 @@ const T = {
     'wa.hello':'Hello! My name is','wa.interest':'I am interested in the procedure','wa.comment':'Additional info',
   }
 };
- 
+
 // Service options per language
 const svcOptions = {
   ru: ['Абдоминопластика','Блефаропластика','Липосакция','Маммопластика','Ринопластика','Косметология (Ботокс, филлеры, Morpheus8)','Отопластика','Женская интимная пластика','Мужская интимная пластика','Другое'],
   kz: ['Абдоминопластика','Блефаропластика','Липосакция','Маммопластика','Ринопластика','Косметология (Ботокс, филлерлер, Morpheus8)','Отопластика','Әйелдер интимдік пластикасы','Ер адамдар интимдік пластикасы','Басқа'],
   en: ['Abdominoplasty','Blepharoplasty','Liposuction','Mammoplasty','Rhinoplasty','Cosmetology (Botox, fillers, Morpheus8)','Otoplasty','Female Intimate Surgery','Male Intimate Surgery','Other']
 };
- 
+
 let lang = 'ru';
- 
+
 function setLang(l) {
   lang = l;
   const t = T[l];
@@ -1059,32 +1059,32 @@ function setLang(l) {
   document.getElementById('fp').placeholder = '+7 (___) ___-__-__';
   document.getElementById('fm').placeholder = l==='ru'?'Напишите ваш вопрос или пожелание…':l==='kz'?'Сұрағыңызды жазыңыз…':'Write your question…';
 }
- 
+
 /* ---- Theme toggle with sun/moon ---- */
 function toggleTheme() {
   const isDark = document.body.getAttribute('data-theme') === 'dark';
   document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
 }
- 
+
 /* ---- Mobile menu ---- */
 function toggleMenu() {
   document.getElementById('mobMenu').classList.toggle('open');
   document.getElementById('hbg').classList.toggle('open');
 }
- 
+
 /* ---- Loader ---- */
 window.addEventListener('load', () => setTimeout(() => document.getElementById('loader').classList.add('out'), 1300));
- 
+
 /* ---- Scroll events ---- */
 window.addEventListener('scroll', () => {
   document.getElementById('nav').classList.toggle('scrolled', scrollY > 60);
   document.getElementById('scrollTop').classList.toggle('show', scrollY > 400);
 });
- 
+
 /* ---- Scroll reveal ---- */
 const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) e.target.classList.add('vis'); }), { threshold: 0.09 });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
- 
+
 /* ---- Animated counters ---- */
 const co = new IntersectionObserver(es => es.forEach(e => {
   if (e.isIntersecting) {
@@ -1095,7 +1095,7 @@ const co = new IntersectionObserver(es => es.forEach(e => {
   }
 }), { threshold: 0.5 });
 document.querySelectorAll('[data-counter]').forEach(el => co.observe(el));
- 
+
 /* ---- Form → WhatsApp with full data in selected language ---- */
 function submitForm() {
   const name = document.getElementById('fn').value.trim();
@@ -1103,13 +1103,13 @@ function submitForm() {
   const svc  = document.getElementById('fs').value;
   const msg  = document.getElementById('fm').value.trim();
   if (!name || !phone) { alert(T[lang]['form.alert']); return; }
- 
+
   const t = T[lang];
   let text = `${t['wa.hello']} ${name}.\n`;
   if (svc) text += `${t['wa.interest']}: ${svc}.\n`;
   if (msg) text += `${t['wa.comment']}: ${msg}\n`;
   text += `📞 ${phone}`;
- 
+
   const toast = document.getElementById('toast');
   toast.textContent = lang==='ru'?'✓ Открываем WhatsApp…':lang==='kz'?'✓ WhatsApp ашылуда…':'✓ Opening WhatsApp…';
   toast.classList.add('show');
@@ -1117,1743 +1117,15 @@ function submitForm() {
     toast.classList.remove('show');
     window.open('https://wa.me/+77758882288?text=' + encodeURIComponent(text), '_blank');
   }, 800);
- 
+
   document.getElementById('fn').value = '';
   document.getElementById('fp').value = '';
   document.getElementById('fs').value = '';
   document.getElementById('fm').value = '';
 }
- 
+
 /* ---- Init ---- */
 setLang('ru');
 </script>
-</body>
-</html>
-       position: fixed; inset: 0; z-index: 9999;
-      background: var(--deep);
-      display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      gap: 20px;
-      transition: opacity .6s ease, visibility .6s ease;
-    }
-    #loader.hidden { opacity: 0; visibility: hidden; }
-
-    .loader-logo {
-      font-family: var(--ff-display);
-      font-size: 2.5rem;
-      font-weight: 300;
-      color: var(--gold);
-      letter-spacing: .25em;
-      animation: pulse-logo 1.5s ease infinite;
-    }
-    @keyframes pulse-logo {
-      0%,100% { opacity:.4; transform: scale(.97); }
-      50%      { opacity:1;  transform: scale(1);   }
-    }
-
-    .loader-bar {
-      width: 180px; height: 2px;
-      background: rgba(201,169,110,.2);
-      border-radius: 2px;
-      overflow: hidden;
-    }
-    .loader-bar::after {
-      content:''; display:block;
-      width: 50%; height:100%;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      animation: bar-sweep 1.5s ease infinite;
-    }
-    @keyframes bar-sweep {
-      0%   { transform: translateX(-100%); }
-      100% { transform: translateX(300%); }
-    }
-
-    /* =====================================================
-       FLOATING WHATSAPP
-    ===================================================== */
-    .wa-float {
-      position: fixed; bottom: 28px; right: 28px; z-index: 1000;
-      width: 58px; height: 58px;
-      background: linear-gradient(135deg, #25D366, #128C7E);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,.4);
-      transition: transform .3s ease, box-shadow .3s ease;
-      animation: wa-bounce 2s ease infinite;
-    }
-    .wa-float:hover { transform: scale(1.12); box-shadow: 0 10px 32px rgba(37,211,102,.55); }
-    @keyframes wa-bounce {
-      0%,100% { transform: translateY(0); }
-      50%      { transform: translateY(-6px); }
-    }
-    .wa-float svg { width: 30px; height: 30px; fill: white; }
-
-    /* =====================================================
-       SCROLL-TO-TOP BUTTON
-    ===================================================== */
-    #scrollTop {
-      position: fixed; bottom: 100px; right: 28px; z-index: 1000;
-      width: 44px; height: 44px;
-      background: var(--gold);
-      border: none; border-radius: 50%; cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      opacity: 0; visibility: hidden;
-      transition: opacity .3s, visibility .3s, transform .3s;
-    }
-    #scrollTop.visible { opacity: 1; visibility: visible; }
-    #scrollTop:hover { transform: translateY(-4px); }
-    #scrollTop svg { width: 20px; height: 20px; stroke: white; fill: none; }
-
-    /* =====================================================
-       NAVBAR
-    ===================================================== */
-    #navbar {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 800;
-      height: var(--nav-h);
-      padding: 0 6%;
-      display: flex; align-items: center; justify-content: space-between;
-      background: var(--glass);
-      backdrop-filter: blur(18px);
-      -webkit-backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      transition: background var(--trans), box-shadow var(--trans);
-    }
-    #navbar.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,.18); }
-
-    .nav-logo {
-      font-family: var(--ff-display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: .1em;
-    }
-    .nav-logo span { font-weight: 300; color: var(--text); }
-
-    .nav-links {
-      display: flex; gap: 2rem; list-style: none;
-    }
-    .nav-links a {
-      font-size: .82rem;
-      font-weight: 500;
-      letter-spacing: .08em;
-      text-transform: uppercase;
-      color: var(--text2);
-      position: relative;
-      transition: color .3s;
-    }
-    .nav-links a::after {
-      content:''; position:absolute; bottom:-4px; left:0;
-      width:0; height:1px; background: var(--gold);
-      transition: width .3s;
-    }
-    .nav-links a:hover { color: var(--gold); }
-    .nav-links a:hover::after { width: 100%; }
-
-    .nav-right { display: flex; align-items: center; gap: 12px; }
-
-    /* Language switcher */
-    .lang-switcher {
-      display: flex; gap: 4px;
-    }
-    .lang-btn {
-      padding: 4px 8px;
-      font-size: .72rem;
-      font-family: var(--ff-body);
-      font-weight: 500;
-      letter-spacing: .06em;
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      background: transparent;
-      color: var(--text2);
-      cursor: pointer;
-      transition: all .25s;
-    }
-    .lang-btn.active { background: var(--gold); color: white; border-color: var(--gold); }
-
-    /* Theme toggle */
-    .theme-toggle {
-      width: 40px; height: 22px;
-      background: var(--border);
-      border: 1px solid var(--border);
-      border-radius: 11px;
-      cursor: pointer;
-      position: relative;
-      transition: background .3s;
-    }
-    .theme-toggle::after {
-      content:''; position:absolute;
-      top: 2px; left: 2px;
-      width: 16px; height: 16px;
-      border-radius: 50%;
-      background: var(--gold);
-      transition: transform .3s;
-    }
-    [data-theme="light"] .theme-toggle::after { transform: translateX(18px); }
-
-    .nav-cta {
-      padding: 9px 20px;
-      background: linear-gradient(135deg, var(--gold), #A07840);
-      color: white;
-      border-radius: 6px;
-      font-size: .8rem;
-      font-weight: 600;
-      letter-spacing: .06em;
-      text-transform: uppercase;
-      transition: transform .25s, box-shadow .25s;
-    }
-    .nav-cta:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(201,169,110,.4); }
-
-    /* Hamburger */
-    .hamburger {
-      display: none;
-      flex-direction: column; gap: 5px;
-      cursor: pointer; background: none; border: none; padding: 4px;
-    }
-    .hamburger span {
-      display: block; width: 24px; height: 2px;
-      background: var(--text); border-radius: 2px;
-      transition: all .3s;
-    }
-    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    .hamburger.open span:nth-child(2) { opacity: 0; }
-    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    /* Mobile menu */
-    .mobile-menu {
-      position: fixed; top: var(--nav-h); left: 0; right: 0;
-      background: var(--glass);
-      backdrop-filter: blur(18px);
-      border-bottom: 1px solid var(--border);
-      padding: 0;
-      max-height: 0; overflow: hidden;
-      transition: max-height .4s ease, padding .4s ease;
-      z-index: 799;
-    }
-    .mobile-menu.open { max-height: 400px; padding: 24px 6%; }
-    .mobile-menu ul { list-style: none; display: flex; flex-direction: column; gap: 16px; }
-    .mobile-menu a { font-size: 1rem; color: var(--text2); }
-    .mobile-menu a:hover { color: var(--gold); }
-
-    /* =====================================================
-       HERO SECTION
-    ===================================================== */
-    #hero {
-      min-height: 100vh;
-      display: flex; align-items: center;
-      position: relative;
-      overflow: hidden;
-      padding: calc(var(--nav-h) + 60px) 8% 80px;
-    }
-
-    /* Animated gradient background */
-    .hero-bg {
-      position: absolute; inset: 0;
-      background: radial-gradient(ellipse 80% 60% at 65% 40%, rgba(201,169,110,.12) 0%, transparent 65%),
-                  radial-gradient(ellipse 60% 80% at 20% 70%, rgba(212,160,160,.08) 0%, transparent 60%),
-                  var(--bg);
-      animation: hero-shift 12s ease infinite alternate;
-    }
-    @keyframes hero-shift {
-      0%   { background-position: 0% 0%; }
-      100% { background-position: 100% 100%; }
-    }
-
-    /* Floating golden shapes */
-    .hero-shapes { position: absolute; inset: 0; pointer-events: none; }
-    .shape {
-      position: absolute;
-      border: 1px solid rgba(201,169,110,.15);
-      border-radius: 50%;
-      animation: float-shape linear infinite;
-    }
-    .shape:nth-child(1) { width:300px; height:300px; top:10%; right:5%; animation-duration:18s; }
-    .shape:nth-child(2) { width:180px; height:180px; top:55%; right:18%; animation-duration:13s; animation-delay:-4s; }
-    .shape:nth-child(3) { width:80px;  height:80px;  top:20%; right:28%; animation-duration:9s;  animation-delay:-7s; }
-    .shape:nth-child(4) { width:500px; height:500px; top:-10%; right:-8%; border-radius: 0; transform: rotate(30deg);
-      border-width: 1px; animation-duration: 25s; }
-    @keyframes float-shape {
-      0%   { transform: translateY(0) rotate(0deg); opacity: .4; }
-      50%  { transform: translateY(-28px) rotate(180deg); opacity: .9; }
-      100% { transform: translateY(0) rotate(360deg); opacity: .4; }
-    }
-
-    .hero-content { position: relative; z-index: 2; max-width: 640px; }
-    .hero-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 6px 16px;
-      border: 1px solid var(--gold);
-      border-radius: 100px;
-      font-size: .72rem;
-      font-weight: 600;
-      letter-spacing: .12em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 28px;
-      animation: fade-up .8s ease both;
-    }
-    .hero-badge::before {
-      content:''; width:6px; height:6px;
-      border-radius: 50%; background: var(--gold);
-      animation: blink 1.5s ease infinite;
-    }
-    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
-
-    .hero-title {
-      font-family: var(--ff-display);
-      font-size: clamp(2.8rem, 6vw, 5.2rem);
-      font-weight: 300;
-      line-height: 1.1;
-      color: var(--text);
-      margin-bottom: 24px;
-      animation: fade-up .8s .15s ease both;
-    }
-    .hero-title em {
-      font-style: italic;
-      color: var(--gold);
-    }
-
-    .hero-sub {
-      font-size: 1.05rem;
-      color: var(--text2);
-      line-height: 1.7;
-      margin-bottom: 40px;
-      max-width: 480px;
-      animation: fade-up .8s .3s ease both;
-    }
-
-    .hero-btns {
-      display: flex; flex-wrap: wrap; gap: 16px;
-      animation: fade-up .8s .45s ease both;
-    }
-    .btn-primary {
-      padding: 14px 32px;
-      background: linear-gradient(135deg, var(--gold), #9A7035);
-      color: white;
-      border-radius: 8px;
-      font-weight: 600;
-      font-size: .9rem;
-      letter-spacing: .05em;
-      transition: transform .3s, box-shadow .3s;
-      border: none; cursor: pointer;
-    }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(201,169,110,.45); }
-
-    .btn-outline {
-      padding: 13px 32px;
-      background: transparent;
-      color: var(--text);
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: .9rem;
-      letter-spacing: .05em;
-      transition: all .3s;
-      cursor: pointer;
-    }
-    .btn-outline:hover {
-      border-color: var(--gold);
-      color: var(--gold);
-      transform: translateY(-3px);
-    }
-
-    /* Hero right visual */
-    .hero-visual {
-      position: absolute; right: 6%; top: 50%; transform: translateY(-50%);
-      width: min(480px, 42vw);
-      animation: fade-right 1s .3s ease both;
-    }
-    .hero-card-stack { position: relative; }
-    .hcard {
-      position: relative;
-      background: var(--card-bg);
-      backdrop-filter: blur(16px);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 28px;
-      box-shadow: 0 20px 60px rgba(0,0,0,.15);
-    }
-    .hcard-main {
-      z-index: 2;
-    }
-    .hcard-stat {
-      font-family: var(--ff-display);
-      font-size: 3.5rem;
-      font-weight: 600;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .hcard-label {
-      font-size: .8rem;
-      color: var(--text2);
-      margin-top: 6px;
-      letter-spacing: .06em;
-    }
-    .hcard-row { display: flex; gap: 16px; margin-top: 20px; }
-    .hcard-mini {
-      flex: 1;
-      background: rgba(201,169,110,.08);
-      border-radius: 12px;
-      padding: 16px;
-      border: 1px solid var(--border);
-    }
-    .hcard-mini-num {
-      font-family: var(--ff-display);
-      font-size: 1.8rem;
-      color: var(--gold);
-    }
-    .hcard-mini-label { font-size: .7rem; color: var(--text2); margin-top: 4px; }
-
-    .hcard-badge-group { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
-    .hbadge {
-      padding: 6px 12px;
-      background: rgba(201,169,110,.1);
-      border: 1px solid rgba(201,169,110,.2);
-      border-radius: 100px;
-      font-size: .72rem;
-      color: var(--gold);
-      letter-spacing: .04em;
-    }
-
-    @keyframes fade-up   { from { opacity:0; transform:translateY(30px); } to { opacity:1; transform:translateY(0); } }
-    @keyframes fade-right{ from { opacity:0; transform:translate(40px,-50%); } to { opacity:1; transform:translate(0,-50%); } }
-
-    /* =====================================================
-       SECTION UTILITY
-    ===================================================== */
-    section { padding: 100px 8%; }
-    .section-tag {
-      display: inline-flex; align-items: center; gap: 10px;
-      font-size: .72rem; font-weight: 600;
-      letter-spacing: .15em; text-transform: uppercase;
-      color: var(--gold); margin-bottom: 16px;
-    }
-    .section-tag::before {
-      content:''; width: 32px; height: 1px; background: var(--gold);
-    }
-    .section-title {
-      font-family: var(--ff-display);
-      font-size: clamp(2rem, 4vw, 3.2rem);
-      font-weight: 300;
-      line-height: 1.15;
-      color: var(--text);
-      margin-bottom: 16px;
-    }
-    .section-title em { font-style: italic; color: var(--gold); }
-    .section-sub {
-      font-size: 1rem;
-      color: var(--text2);
-      line-height: 1.7;
-      max-width: 560px;
-      margin-bottom: 60px;
-    }
-
-    /* Scroll reveal */
-    .reveal {
-      opacity: 0;
-      transform: translateY(40px);
-      transition: opacity .7s ease, transform .7s ease;
-    }
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
-    .reveal-delay-1 { transition-delay: .1s; }
-    .reveal-delay-2 { transition-delay: .2s; }
-    .reveal-delay-3 { transition-delay: .3s; }
-    .reveal-delay-4 { transition-delay: .4s; }
-
-    /* Divider */
-    .divider {
-      width: 100%;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, var(--gold), transparent);
-      opacity: .3;
-    }
-
-   
-    /* =====================================================
-       ABOUT SECTION
-    ===================================================== */
-    #about { background: var(--bg2); }
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-    }
-    .about-text { }
-    .about-quote {
-      font-family: var(--ff-display);
-      font-size: 1.25rem;
-      font-style: italic;
-      color: var(--gold);
-      border-left: 2px solid var(--gold);
-      padding-left: 20px;
-      margin-bottom: 24px;
-      line-height: 1.6;
-    }
-    .about-body { font-size: .95rem; color: var(--text2); line-height: 1.8; margin-bottom: 36px; }
-
-    .stats-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 20px;
-    }
-    .stat-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      padding: 28px;
-      transition: transform .3s, box-shadow .3s;
-    }
-    .stat-card:hover { transform: translateY(-6px); box-shadow: 0 16px 40px rgba(0,0,0,.12); }
-    .stat-num {
-      font-family: var(--ff-display);
-      font-size: 2.8rem;
-      font-weight: 600;
-      color: var(--gold);
-      line-height: 1;
-    }
-    .stat-label { font-size: .82rem; color: var(--text2); margin-top: 8px; line-height: 1.4; }
-
-    /* =====================================================
-       SERVICES SECTION
-    ===================================================== */
-    .services-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .service-card {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px 28px;
-      position: relative;
-      overflow: hidden;
-      cursor: pointer;
-      transition: transform .3s, box-shadow .3s, border-color .3s;
-    }
-    .service-card::before {
-      content:''; position:absolute; inset:0;
-      background: linear-gradient(135deg, rgba(201,169,110,.1), transparent);
-      opacity: 0;
-      transition: opacity .3s;
-    }
-    .service-card:hover { transform: translateY(-8px); box-shadow: 0 24px 60px rgba(0,0,0,.15); border-color: rgba(201,169,110,.4); }
-    .service-card:hover::before { opacity: 1; }
-
-    .service-icon {
-      width: 52px; height: 52px;
-      border-radius: 14px;
-      background: rgba(201,169,110,.12);
-      border: 1px solid rgba(201,169,110,.25);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.5rem;
-      margin-bottom: 20px;
-      transition: background .3s;
-    }
-    .service-card:hover .service-icon { background: rgba(201,169,110,.22); }
-
-    .service-name {
-      font-family: var(--ff-display);
-      font-size: 1.3rem;
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 10px;
-    }
-    .service-desc { font-size: .85rem; color: var(--text2); line-height: 1.6; margin-bottom: 20px; }
-    .service-price {
-      font-family: var(--ff-display);
-      font-size: 1.5rem;
-      font-weight: 600;
-      color: var(--gold);
-      margin-bottom: 20px;
-    }
-    .service-price small { font-size: .6em; font-weight: 400; color: var(--text2); }
-
-    .btn-service {
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 10px 20px;
-      border: 1px solid var(--border);
-      border-radius: 8px;
-      font-size: .8rem;
-      font-weight: 500;
-      color: var(--text2);
-      transition: all .3s;
-      background: transparent;
-      cursor: pointer;
-    }
-    .btn-service:hover { border-color: var(--gold); color: var(--gold); }
-    .btn-service svg { width:16px; height:16px; stroke: currentColor; fill: none; transition: transform .3s; }
-    .service-card:hover .btn-service svg { transform: translateX(4px); }
-
-    /* =====================================================
-       REVIEWS SLIDER
-    ===================================================== */
-    #reviews { background: var(--bg2); }
-    .slider-wrap { position: relative; overflow: hidden; }
-    .slider-track {
-      display: flex;
-      transition: transform .5s cubic-bezier(.4,0,.2,1);
-    }
-    .review-card {
-      min-width: 100%;
-      padding: 0 5%;
-    }
-    .review-inner {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 44px;
-      max-width: 780px;
-      margin: 0 auto;
-      text-align: center;
-    }
-    .review-stars {
-      color: var(--gold);
-      font-size: 1.2rem;
-      letter-spacing: 4px;
-      margin-bottom: 24px;
-    }
-    .review-text {
-      font-family: var(--ff-display);
-      font-size: clamp(1.1rem, 2.5vw, 1.5rem);
-      font-style: italic;
-      color: var(--text);
-      line-height: 1.65;
-      margin-bottom: 28px;
-    }
-    .review-author { font-size: .85rem; color: var(--text2); }
-    .review-author strong { color: var(--gold); display: block; font-size: 1rem; margin-bottom: 4px; }
-
-    .slider-controls {
-      display: flex; align-items: center; justify-content: center;
-      gap: 16px; margin-top: 32px;
-    }
-    .slider-btn {
-      width: 44px; height: 44px;
-      border-radius: 50%;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      cursor: pointer;
-      display: flex; align-items: center; justify-content: center;
-      transition: all .3s;
-    }
-    .slider-btn:hover { border-color: var(--gold); }
-    .slider-btn svg { width:18px; height:18px; stroke: var(--text2); fill:none; }
-    .slider-btn:hover svg { stroke: var(--gold); }
-
-    .slider-dots { display: flex; gap: 8px; }
-    .dot {
-      width: 8px; height: 8px;
-      border-radius: 50%;
-      background: var(--border);
-      cursor: pointer;
-      transition: all .3s;
-    }
-    .dot.active { background: var(--gold); transform: scale(1.3); }
-
-    /* =====================================================
-       MAP / BRANCHES
-    ===================================================== */
-    .branches-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.4fr;
-      gap: 60px;
-      align-items: start;
-    }
-    .branch-item {
-      display: flex; gap: 16px;
-      padding: 24px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 16px;
-      margin-bottom: 16px;
-      transition: border-color .3s, transform .3s;
-    }
-    .branch-item:hover { border-color: rgba(201,169,110,.4); transform: translateX(6px); }
-    .branch-icon-wrap {
-      width: 48px; height: 48px; flex-shrink: 0;
-      border-radius: 12px;
-      background: rgba(201,169,110,.12);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .branch-icon-wrap svg { width: 22px; height: 22px; stroke: var(--gold); fill: none; }
-    .branch-name { font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .branch-addr { font-size: .85rem; color: var(--text2); line-height: 1.5; }
-    .branch-hours { font-size: .78rem; color: var(--gold); margin-top: 6px; }
-
-    .map-frame {
-      border-radius: 20px;
-      overflow: hidden;
-      border: 1px solid var(--border);
-      height: 380px;
-    }
-    .map-frame iframe { width:100%; height:100%; border:none; }
-
-    /* =====================================================
-       SOCIAL SECTION
-    ===================================================== */
-    #social { background: var(--bg2); }
-    .social-grid {
-      display: flex; flex-wrap: wrap;
-      gap: 20px; justify-content: center;
-    }
-    .social-card {
-      flex: 1; min-width: 180px; max-width: 240px;
-      background: var(--card-bg);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 36px 24px;
-      text-align: center;
-      transition: transform .3s, border-color .3s, box-shadow .3s;
-      cursor: pointer;
-    }
-    .social-card:hover { transform: translateY(-10px) scale(1.03); border-color: rgba(201,169,110,.4); box-shadow: 0 20px 50px rgba(0,0,0,.15); }
-    .social-icon {
-      width: 56px; height: 56px;
-      border-radius: 16px;
-      margin: 0 auto 16px;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 1.6rem;
-      background: rgba(201,169,110,.1);
-      border: 1px solid var(--border);
-      transition: background .3s;
-    }
-    .social-card:hover .social-icon { background: rgba(201,169,110,.2); }
-    .social-name { font-weight: 600; color: var(--text); margin-bottom: 4px; }
-    .social-handle { font-size: .8rem; color: var(--gold); }
-
-    /* =====================================================
-       CONTACT SECTION
-    ===================================================== */
-    .contact-grid {
-      display: grid;
-      grid-template-columns: 1fr 1.2fr;
-      gap: 60px;
-      align-items: start;
-    }
-    .contact-info { }
-    .contact-item {
-      display: flex; align-items: flex-start; gap: 16px;
-      margin-bottom: 28px;
-    }
-    .contact-icon {
-      width: 48px; height: 48px; flex-shrink: 0;
-      border-radius: 12px;
-      background: rgba(201,169,110,.1);
-      border: 1px solid var(--border);
-      display: flex; align-items: center; justify-content: center;
-    }
-    .contact-icon svg { width: 20px; height: 20px; stroke: var(--gold); fill: none; }
-    .contact-label { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--text2); margin-bottom: 4px; }
-    .contact-value { font-weight: 500; color: var(--text); }
-    .contact-value a { color: var(--text); transition: color .25s; }
-    .contact-value a:hover { color: var(--gold); }
-
-    .contact-cta-block {
-      margin-top: 36px;
-      padding: 28px;
-      background: linear-gradient(135deg, rgba(201,169,110,.12), rgba(212,160,160,.06));
-      border: 1px solid var(--border);
-      border-radius: 16px;
-    }
-    .contact-cta-block p { font-size: .9rem; color: var(--text2); margin-bottom: 16px; }
-
-    /* Contact form */
-    .contact-form {
-      background: var(--card-bg);
-      backdrop-filter: blur(12px);
-      border: 1px solid var(--border);
-      border-radius: 24px;
-      padding: 40px;
-    }
-    .form-title {
-      font-family: var(--ff-display);
-      font-size: 1.5rem;
-      font-weight: 400;
-      color: var(--text);
-      margin-bottom: 28px;
-    }
-    .form-group { margin-bottom: 20px; }
-    .form-group label { display: block; font-size: .78rem; font-weight: 500; letter-spacing: .06em; color: var(--text2); margin-bottom: 8px; text-transform: uppercase; }
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      padding: 13px 16px;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      border-radius: 10px;
-      color: var(--text);
-      font-family: var(--ff-body);
-      font-size: .9rem;
-      transition: border-color .25s, box-shadow .25s;
-      outline: none;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(201,169,110,.15);
-    }
-    .form-group textarea { resize: vertical; min-height: 100px; }
-    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-
-    .btn-submit {
-      width: 100%;
-      padding: 15px;
-      background: linear-gradient(135deg, var(--gold), #9A7035);
-      color: white;
-      border: none;
-      border-radius: 10px;
-      font-size: .9rem;
-      font-weight: 600;
-      letter-spacing: .06em;
-      cursor: pointer;
-      transition: transform .3s, box-shadow .3s;
-    }
-    .btn-submit:hover { transform: translateY(-2px); box-shadow: 0 10px 28px rgba(201,169,110,.4); }
-
-    /* =====================================================
-       FOOTER
-    ===================================================== */
-    footer {
-      background: var(--deep);
-      color: rgba(255,255,255,.5);
-      padding: 60px 8% 32px;
-    }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: 1.5fr 1fr 1fr 1fr;
-      gap: 48px;
-      margin-bottom: 48px;
-    }
-    .footer-logo {
-      font-family: var(--ff-display);
-      font-size: 1.6rem;
-      font-weight: 600;
-      color: var(--gold);
-      letter-spacing: .1em;
-      margin-bottom: 12px;
-    }
-    .footer-logo span { font-weight: 300; color: rgba(255,255,255,.7); }
-    .footer-tagline { font-size: .85rem; line-height: 1.6; margin-bottom: 20px; }
-    .footer-col-title { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-links a { font-size: .85rem; color: rgba(255,255,255,.5); transition: color .25s; }
-    .footer-links a:hover { color: var(--gold); }
-    .footer-bottom {
-      border-top: 1px solid rgba(255,255,255,.08);
-      padding-top: 28px;
-      display: flex; justify-content: space-between; align-items: center;
-      flex-wrap: wrap; gap: 12px;
-    }
-    .footer-copy { font-size: .8rem; }
-
-    /* =====================================================
-       RESPONSIVE
-    ===================================================== */
-    @media (max-width: 1024px) {
-      .hero-visual { display: none; }
-      .about-grid { grid-template-columns: 1fr; gap: 40px; }
-      .branches-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr 1fr; }
-    }
-    @media (max-width: 768px) {
-      section { padding: 70px 6%; }
-      .nav-links { display: none; }
-      .nav-cta { display: none; }
-      .hamburger { display: flex; }
-      .lang-switcher { display: none; }
-      .stats-grid { grid-template-columns: 1fr 1fr; }
-      .services-grid { grid-template-columns: 1fr; }
-      .form-row { grid-template-columns: 1fr; }
-      .footer-grid { grid-template-columns: 1fr; }
-      .promo-inner { flex-direction: column; text-align: center; align-items: center; }
-      .footer-bottom { flex-direction: column; text-align: center; }
-    }
-
-    /* =====================================================
-       NOTIFICATION TOAST
-    ===================================================== */
-    #toast {
-      position: fixed; bottom: 28px; left: 50%; transform: translateX(-50%) translateY(80px);
-      background: var(--gold);
-      color: white;
-      padding: 14px 28px;
-      border-radius: 100px;
-      font-size: .9rem;
-      font-weight: 600;
-      z-index: 2000;
-      transition: transform .4s ease;
-      pointer-events: none;
-    }
-    #toast.show { transform: translateX(-50%) translateY(0); }
-  </style>
-</head>
-<body data-theme="dark">
-
-  <!-- =====================================================
-       PAGE LOADER
-  ===================================================== -->
-  <div id="loader">
-    <div class="loader-logo">MedCenter</div>
-    <div class="loader-bar"></div>
-  </div>
-
-  <!-- =====================================================
-       FLOATING WHATSAPP BUTTON
-  ===================================================== -->
-  <a class="wa-float" href="https://wa.me/87758882288" target="_blank" title="WhatsApp">
-    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-  </a>
-
-  <!-- Scroll to top -->
-  <button id="scrollTop" onclick="window.scrollTo({top:0,behavior:'smooth'})" title="Вверх">
-    <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="18 15 12 9 6 15"/></svg>
-  </button>
-
-  <!-- Toast notification -->
-  <div id="toast">✓ Ваша заявка отправлена!</div>
-
-  <!-- =====================================================
-       NAVBAR
-  ===================================================== -->
-  <nav id="navbar">
-    <div class="nav-logo">Med<span>Center</span></div>
-
-    <ul class="nav-links" id="navLinks">
-      <li><a href="#about" data-i18n="nav.about">О нас</a></li>
-      <li><a href="#services" data-i18n="nav.services">Услуги</a></li>
-      <li><a href="#reviews" data-i18n="nav.reviews">Отзывы</a></li>
-      <li><a href="#branches" data-i18n="nav.branches">Адреса</a></li>
-      <li><a href="#contact" data-i18n="nav.contact">Контакты</a></li>
-    </ul>
-
-    <div class="nav-right">
-      <div class="lang-switcher">
-        <button class="lang-btn active" onclick="setLang('ru')">РУС</button>
-        <button class="lang-btn" onclick="setLang('kz')">ҚАЗ</button>
-        <button class="lang-btn" onclick="setLang('en')">ENG</button>
-      </div>
-      <button class="theme-toggle" onclick="toggleTheme()" title="Тема"></button>
-      <a class="nav-cta" href="https://wa.me/+77758882288" target="_blank" data-i18n="nav.cta">Записаться</a>
-      <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#about" onclick="toggleMenu()" data-i18n="nav.about">О нас</a></li>
-      <li><a href="#services" onclick="toggleMenu()" data-i18n="nav.services">Услуги</a></li>
-      <li><a href="#reviews" onclick="toggleMenu()" data-i18n="nav.reviews">Отзывы</a></li>
-      <li><a href="#branches" onclick="toggleMenu()" data-i18n="nav.branches">Адреса</a></li>
-      <li><a href="#contact" onclick="toggleMenu()" data-i18n="nav.contact">Контакты</a></li>
-      <li style="margin-top:8px;">
-        <div class="lang-switcher">
-          <button class="lang-btn active" onclick="setLang('ru');toggleMenu()">РУС</button>
-          <button class="lang-btn" onclick="setLang('kz');toggleMenu()">ҚАЗ</button>
-          <button class="lang-btn" onclick="setLang('en');toggleMenu()">ENG</button>
-        </div>
-      </li>
-    </ul>
-  </div>
-
-  <!-- =====================================================
-       HERO SECTION
-  ===================================================== -->
-  <section id="hero">
-    <div class="hero-bg"></div>
-    <div class="hero-shapes">
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-      <div class="shape"></div>
-    </div>
-
-    <div class="hero-content">
-      <div class="hero-badge" data-i18n="hero.badge">Клиника пластической хирургии</div>
-      <h1 class="hero-title">
-        <span data-i18n="hero.title1">Красота, которая</span><br>
-        <em data-i18n="hero.title2">меняет жизнь</em>
-      </h1>
-      <p class="hero-sub" data-i18n="hero.sub">
-        Современные технологии, опытные хирурги и индивидуальный подход — всё для вашего совершенства в MedCenter.
-      </p>
-      <div class="hero-btns">
-        <a class="btn-primary" href="#services" data-i18n="hero.btn1">Наши услуги</a>
-        <a class="btn-outline" href="https://wa.me/+77758882288" target="_blank" data-i18n="hero.btn2">Консультация</a>
-      </div>
-    </div>
-
-    <!-- Hero visual card -->
-    <div class="hero-visual">
-      <div class="hero-card-stack">
-        <div class="hcard hcard-main">
-          <div class="hcard-stat" id="heroCounter">1200+</div>
-          <div class="hcard-label" data-i18n="hero.card.label">Успешных операций</div>
-          <div class="hcard-row">
-            <div class="hcard-mini">
-              <div class="hcard-mini-num">12+</div>
-              <div class="hcard-mini-label" data-i18n="hero.card.years">Лет опыта</div>
-            </div>
-            <div class="hcard-mini">
-              <div class="hcard-mini-num">98%</div>
-              <div class="hcard-mini-label" data-i18n="hero.card.satis">Довольных клиентов</div>
-            </div>
-          </div>
-          <div class="hcard-badge-group">
-            <span class="hbadge">Абдоминопластика</span>
-            <span class="hbadge">Блефаропластика</span>
-            <span class="hbadge">Маммопластика</span>
-            <span class="hbadge">Липосакция</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  
-  <!-- =====================================================
-       ABOUT SECTION
-  ===================================================== -->
-  <section id="about">
-    <div class="about-grid">
-      <div class="about-text reveal">
-        <div class="section-tag" data-i18n="about.tag">О клинике</div>
-        <h2 class="section-title"><span data-i18n="about.title1">Мы создаём</span><br><em data-i18n="about.title2">новую вас</em></h2>
-        <p class="about-quote" data-i18n="about.quote">"Красота — это не изменение себя, а раскрытие лучшего в себе"</p>
-        <p class="about-body" data-i18n="about.body">
-          MedCenter — клиника пластической хирургии нового поколения в Казахстане. Более 12 лет мы помогаем людям обрести уверенность в себе через современные хирургические и косметологические решения. Наша команда сертифицированных хирургов работает строго по международным стандартам безопасности, применяя только сертифицированные препараты и оборудование последнего поколения.
-        </p>
-        <a class="btn-primary" href="#contact" data-i18n="about.btn">Записаться на консультацию</a>
-      </div>
-
-      <div class="stats-grid reveal reveal-delay-2">
-        <div class="stat-card">
-          <div class="stat-num" data-counter="12" data-suffix="+">0</div>
-          <div class="stat-label" data-i18n="stat.years">Лет на рынке пластической хирургии</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num" data-counter="1200" data-suffix="+">0</div>
-          <div class="stat-label" data-i18n="stat.ops">Успешных операций проведено</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num" data-counter="8" data-suffix="">0</div>
-          <div class="stat-label" data-i18n="stat.surgeons">Опытных хирургов в штате</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-num" data-counter="98" data-suffix="%">0</div>
-          <div class="stat-label" data-i18n="stat.satis">Клиентов рекомендуют нас</div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- =====================================================
-       SERVICES SECTION
-  ===================================================== -->
-  <section id="services">
-    <div class="section-tag reveal" data-i18n="services.tag">Услуги</div>
-    <h2 class="section-title reveal" data-i18n="services.title">Наши <em>специализации</em></h2>
-    <p class="section-sub reveal" data-i18n="services.sub">Широкий спектр хирургических и эстетических процедур. Каждый случай — индивидуальный подход.</p>
-
-    <div class="services-grid">
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">🏋️</div>
-        <div class="service-name" data-i18n="s1.name">Абдоминопластика</div>
-        <p class="service-desc" data-i18n="s1.desc">Подтяжка и коррекция брюшной стенки. Устранение дряблости кожи и излишков жира в области живота.</p>
-        <div class="service-price">от 350 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">👁️</div>
-        <div class="service-name" data-i18n="s2.name">Блефаропластика</div>
-        <p class="service-desc" data-i18n="s2.desc">Коррекция верхних и нижних век. Устранение нависших век, мешков и морщин в области глаз.</p>
-        <div class="service-price">от 180 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">💧</div>
-        <div class="service-name" data-i18n="s3.name">Липосакция</div>
-        <p class="service-desc" data-i18n="s3.desc">Удаление локальных жировых отложений. Современные методы: вибрационная, ультразвуковая, лазерная.</p>
-        <div class="service-price">от 250 000 ₸ <small data-i18n="price.from">/ зона</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">✨</div>
-        <div class="service-name" data-i18n="s4.name">Маммопластика</div>
-        <p class="service-desc" data-i18n="s4.desc">Увеличение, уменьшение или подтяжка груди. Сертифицированные импланты мировых производителей.</p>
-        <div class="service-price">от 450 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">🌿</div>
-        <div class="service-name" data-i18n="s5.name">Косметология</div>
-        <p class="service-desc" data-i18n="s5.desc">Инъекционная косметология, ботокс, филлеры, мезотерапия, плазмолифтинг. Аппаратные процедуры.</p>
-        <div class="service-price">от 30 000 ₸ <small data-i18n="price.from">/ процедура</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-3">
-        <div class="service-icon">👂</div>
-        <div class="service-name" data-i18n="s6.name">Отопластика</div>
-        <p class="service-desc" data-i18n="s6.desc">Коррекция формы и положения ушных раковин. Устранение лопоухости. Быстрое восстановление.</p>
-        <div class="service-price">от 200 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-1">
-        <div class="service-icon">♂️</div>
-        <div class="service-name" data-i18n="s7.name">Мужская интимная пластика</div>
-        <p class="service-desc" data-i18n="s7.desc">Коррекция и эстетика мужской интимной зоны. Строгая конфиденциальность, профессиональный подход.</p>
-        <div class="service-price">от 300 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-      <div class="service-card reveal reveal-delay-2">
-        <div class="service-icon">♀️</div>
-        <div class="service-name" data-i18n="s8.name">Женская интимная пластика</div>
-        <p class="service-desc" data-i18n="s8.desc">Лабиопластика, вагинопластика, восстановительная хирургия. Конфиденциально и профессионально.</p>
-        <div class="service-price">от 280 000 ₸ <small data-i18n="price.from">/ операция</small></div>
-        <a class="btn-service" href="https://wa.me/+77758882288" target="_blank">
-          <span data-i18n="btn.consult">Консультация</span>
-          <svg viewBox="0 0 24 24" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
-        </a>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- =====================================================
-       REVIEWS SECTION
-  ===================================================== -->
-  <section id="reviews">
-    <div style="text-align:center; margin-bottom: 60px;">
-      <div class="section-tag reveal" style="justify-content:center;" data-i18n="reviews.tag">Отзывы</div>
-      <h2 class="section-title reveal" data-i18n="reviews.title">Что говорят <em>наши клиенты</em></h2>
-    </div>
-
-    <div class="slider-wrap reveal">
-      <div class="slider-track" id="sliderTrack">
-
-        <div class="review-card">
-          <div class="review-inner">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" data-i18n="r1.text">"Обратилась на блефаропластику. Результат превзошёл все ожидания — через две недели я себя не узнала в зеркале. Хирург всё подробно объяснил, персонал очень внимательный."</p>
-            <div class="review-author">
-              <strong>Айгерим С.</strong>
-              <span data-i18n="r1.service">Блефаропластика • Алматы</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-inner">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" data-i18n="r2.text">"После маммопластики прошло уже полгода — я счастлива! Клиника чистая, оборудование современное. Никаких осложнений, восстановление прошло быстро. Рекомендую всем!"</p>
-            <div class="review-author">
-              <strong>Динара М.</strong>
-              <span data-i18n="r2.service">Маммопластика • Астана</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-inner">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" data-i18n="r3.text">"Липосакция зоны живота и боков. Результатом очень доволен. Врачи профессиональные, конфиденциальность соблюдена полностью. Отдельное спасибо за заботу на этапе восстановления."</p>
-            <div class="review-author">
-              <strong>Максат К.</strong>
-              <span data-i18n="r3.service">Липосакция • Нур-Султан</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-inner">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" data-i18n="r4.text">"Сделала абдоминопластику после родов. Результат потрясающий! Живот как у девушки. Врачи очень внимательные, всё объясняли пошагово. Клинике — только 5 звёзд!"</p>
-            <div class="review-author">
-              <strong>Жанна Т.</strong>
-              <span data-i18n="r4.service">Абдоминопластика • Шымкент</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="review-card">
-          <div class="review-inner">
-            <div class="review-stars">★★★★★</div>
-            <p class="review-text" data-i18n="r5.text">"Отопластика для сына 14 лет. Теперь ребёнок совсем другой — уверенный, счастливый. Операция прошла быстро и безопасно. Спасибо команде MedCenter за профессионализм!"</p>
-            <div class="review-author">
-              <strong>Гульнара Е.</strong>
-              <span data-i18n="r5.service">Отопластика • Астана</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-
-      <div class="slider-controls">
-        <button class="slider-btn" onclick="slideReview(-1)">
-          <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="15 18 9 12 15 6"/></svg>
-        </button>
-        <div class="slider-dots" id="sliderDots"></div>
-        <button class="slider-btn" onclick="slideReview(1)">
-          <svg viewBox="0 0 24 24" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
-        </button>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       BRANCHES / MAP SECTION
-  ===================================================== -->
-  <section id="branches">
-    <div class="section-tag reveal" data-i18n="branches.tag">Адреса</div>
-    <h2 class="section-title reveal" data-i18n="branches.title">Найдите нас <em>рядом с вами</em></h2>
-    <p class="section-sub reveal" data-i18n="branches.sub">Удобное расположение в центре города. Мы работаем с 9:00 до 20:00 ежедневно.</p>
-
-    <div class="branches-grid">
-      <div class="reveal">
-        <div class="branch-item">
-          <div class="branch-icon-wrap">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="branch-name">MedCenter — Главный офис</div>
-            <div class="branch-addr">ул. Керей, Жанибек хандар 28, Астана</div>
-            <div class="branch-hours">⏰ Пн–Вс: 9:00 – 20:00</div>
-          </div>
-        </div>
-
-        <div class="branch-item">
-          <div class="branch-icon-wrap">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="branch-name" data-i18n="contact.phone">Телефон</div>
-            <div class="branch-addr">
-              <a href="tel:+77758882288">+7 (775) 888-22-88</a><br>
-              <a href="tel:+77172565555">+7 (7172) 56-55-55</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="branch-item">
-          <div class="branch-icon-wrap">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          </div>
-          <div>
-            <div class="branch-name">Instagram</div>
-            <div class="branch-addr">
-              <a href="https://instagram.com/soffiel.clinique" target="_blank">@soffiel.clinique</a>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="map-frame reveal reveal-delay-2">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2504.5!2d71.445!3d51.180!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTHCsDEwJzQ4LjAiTiA3McKwMjYnNDIuMCJF!5e0!3m2!1sru!2skz!4v1699999999999!5m2!1sru!2skz"
-          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
-      </div>
-    </div>
-  </section>
-
-  <div class="divider"></div>
-
-  <!-- =====================================================
-       SOCIAL SECTION
-  ===================================================== -->
-  <section id="social">
-    <div style="text-align:center; margin-bottom:60px;">
-      <div class="section-tag reveal" style="justify-content:center;" data-i18n="social.tag">Мы в соцсетях</div>
-      <h2 class="section-title reveal" data-i18n="social.title">Следите за <em>нами</em></h2>
-      <p style="color:var(--text2);font-size:.95rem;max-width:480px;margin:0 auto;" class="reveal" data-i18n="social.sub">Актуальные работы, результаты до/после, акции и полезные материалы</p>
-    </div>
-
-    <div class="social-grid">
-      <a class="social-card reveal reveal-delay-1" href="https://instagram.com/soffiel.clinique" target="_blank">
-        <div class="social-icon">📸</div>
-        <div class="social-name">Instagram</div>
-        <div class="social-handle">@soffiel.clinique</div>
-      </a>
-      <a class="social-card reveal reveal-delay-2" href="https://wa.me/+77758882288" target="_blank">
-        <div class="social-icon">💬</div>
-        <div class="social-name">WhatsApp</div>
-        <div class="social-handle">+7 (775) 888-22-88</div>
-      </a>
-      <a class="social-card reveal reveal-delay-3" href="tel:+77758882288">
-        <div class="social-icon">📞</div>
-        <div class="social-name" data-i18n="social.call">Звонок</div>
-        <div class="social-handle">+7 (7172) 56-55-55</div>
-      </a>
-      <a class="social-card reveal reveal-delay-4" href="https://2gis.kz" target="_blank">
-        <div class="social-icon">🗺️</div>
-        <div class="social-name">2GIS</div>
-        <div class="social-handle" data-i18n="social.map">Найти на карте</div>
-      </a>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       CONTACT SECTION
-  ===================================================== -->
-  <section id="contact" style="background: var(--bg2);">
-    <div class="section-tag reveal" data-i18n="contact.tag">Контакты</div>
-    <h2 class="section-title reveal" data-i18n="contact.title">Запишитесь <em>прямо сейчас</em></h2>
-
-    <div class="contact-grid">
-      <div class="contact-info reveal">
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 10.8a19.79 19.79 0 01-3.07-8.67A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.91 7.91a16 16 0 006.18 6.18l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
-          </div>
-          <div>
-            <div class="contact-label" data-i18n="contact.phone">Телефон</div>
-            <div class="contact-value">
-              <a href="tel:+77758882288">+7 (775) 888-22-88</a><br>
-              <a href="tel:+77172565555">+7 (7172) 56-55-55</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/></svg>
-          </div>
-          <div>
-            <div class="contact-label" data-i18n="contact.addr">Адрес</div>
-            <div class="contact-value">ул. Керей, Жанибек хандар 28, Астана</div>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <div class="contact-icon">
-            <svg viewBox="0 0 24 24" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-          </div>
-          <div>
-            <div class="contact-label" data-i18n="contact.hours">Режим работы</div>
-            <div class="contact-value" data-i18n="contact.hoursVal">Ежедневно: 9:00 – 20:00</div>
-          </div>
-        </div>
-
-        <div class="contact-cta-block">
-          <p data-i18n="contact.wa.text">Хотите быстро записаться? Напишите нам в WhatsApp — ответим в течение нескольких минут!</p>
-          <a class="btn-primary" href="https://wa.me/+77758882288" target="_blank" style="display:inline-block;" data-i18n="contact.wa.btn">WhatsApp — написать</a>
-        </div>
-      </div>
-
-      <div class="contact-form reveal reveal-delay-2">
-        <div class="form-title" data-i18n="form.title">Оставьте заявку</div>
-        <div class="form-row">
-          <div class="form-group">
-            <label data-i18n="form.name">Ваше имя</label>
-            <input type="text" id="fname" placeholder="Имя" />
-          </div>
-          <div class="form-group">
-            <label data-i18n="form.phone">Телефон</label>
-            <input type="tel" id="fphone" placeholder="+7 (___) ___-__-__" />
-          </div>
-        </div>
-        <div class="form-group">
-          <label data-i18n="form.service">Услуга</label>
-          <select id="fservice">
-            <option value="" data-i18n="form.select">Выберите услугу</option>
-            <option>Абдоминопластика</option>
-            <option>Блефаропластика</option>
-            <option>Липосакция</option>
-            <option>Маммопластика</option>
-            <option>Косметология</option>
-            <option>Отопластика</option>
-            <option>Мужская интимная пластика</option>
-            <option>Женская интимная пластика</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label data-i18n="form.message">Комментарий</label>
-          <textarea id="fmessage" placeholder="Напишите ваш вопрос..."></textarea>
-        </div>
-        <button class="btn-submit" onclick="submitForm()" data-i18n="form.submit">Отправить заявку</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- =====================================================
-       FOOTER
-  ===================================================== -->
-  <footer>
-    <div class="footer-grid">
-      <div>
-        <div class="footer-logo">Med<span>Center</span></div>
-        <p class="footer-tagline" data-i18n="footer.tagline">Клиника пластической хирургии нового поколения. Красота и здоровье — в надёжных руках.</p>
-        <div style="display:flex;gap:12px;">
-          <a href="https://instagram.com/soffiel.clinique" target="_blank" style="color:var(--gold);font-size:1.3rem;">📸</a>
-          <a href="https://wa.me/+77758882288" target="_blank" style="color:var(--gold);font-size:1.3rem;">💬</a>
-        </div>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer.services">Услуги</div>
-        <ul class="footer-links">
-          <li><a href="#services">Абдоминопластика</a></li>
-          <li><a href="#services">Блефаропластика</a></li>
-          <li><a href="#services">Липосакция</a></li>
-          <li><a href="#services">Маммопластика</a></li>
-          <li><a href="#services">Косметология</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer.more">Ещё</div>
-        <ul class="footer-links">
-          <li><a href="#about" data-i18n="nav.about">О нас</a></li>
-          <li><a href="#reviews" data-i18n="nav.reviews">Отзывы</a></li>
-          <li><a href="#branches" data-i18n="nav.branches">Адреса</a></li>
-        </ul>
-      </div>
-
-      <div>
-        <div class="footer-col-title" data-i18n="footer.contacts">Контакты</div>
-        <ul class="footer-links">
-          <li><a href="tel:+77758882288">+7 (775) 888-22-88</a></li>
-          <li><a href="tel:+77172565555">+7 (7172) 56-55-55</a></li>
-          <li><a href="https://wa.me/87758882288" target="_blank">WhatsApp</a></li>
-          <li style="color:rgba(255,255,255,.4);font-size:.85rem;">Пн–Вс: 9:00 – 20:00</li>
-          <li style="color:rgba(255,255,255,.4);font-size:.85rem;">ул. Керей, Жанибек хандар 28</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="footer-bottom">
-      <p class="footer-copy">© 2025 MedCenter. Все права защищены.</p>
-      <p style="font-size:.78rem;">Лицензия на медицинскую деятельность №XXX от 01.01.2023</p>
-    </div>
-  </footer>
-
-  <!-- =====================================================
-       JAVASCRIPT
-  ===================================================== -->
-  <script>
-    /* ---- i18n translations ---- */
-    const i18n = {
-      ru: {
-        'nav.about':'О нас','nav.services':'Услуги','nav.reviews':'Отзывы',
-        'nav.branches':'Адреса','nav.contact':'Контакты','nav.cta':'Записаться',
-        'hero.badge':'Клиника пластической хирургии',
-        'hero.title1':'Красота, которая','hero.title2':'меняет жизнь',
-        'hero.sub':'Современные технологии, опытные хирурги и индивидуальный подход — всё для вашего совершенства в MedCenter.',
-        'hero.btn1':'Наши услуги','hero.btn2':'Консультация',
-        'hero.card.label':'Успешных операций','hero.card.years':'Лет опыта','hero.card.satis':'Довольных клиентов',
-        'about.tag':'О клинике','about.title1':'Мы создаём','about.title2':'новую вас',
-        'about.quote':'"Красота — это не изменение себя, а раскрытие лучшего в себе"',
-        'about.body':'MedCenter — клиника пластической хирургии нового поколения в Казахстане. Более 12 лет мы помогаем людям обрести уверенность в себе.',
-        'about.btn':'Записаться на консультацию',
-        'stat.years':'Лет на рынке пластической хирургии',
-        'stat.ops':'Успешных операций проведено',
-        'stat.surgeons':'Опытных хирургов в штате',
-        'stat.satis':'Клиентов рекомендуют нас',
-        'services.tag':'Услуги','services.title':'Наши специализации',
-        'services.sub':'Широкий спектр хирургических и эстетических процедур.',
-        's1.name':'Абдоминопластика','s1.desc':'Подтяжка и коррекция брюшной стенки.',
-        's2.name':'Блефаропластика','s2.desc':'Коррекция верхних и нижних век.',
-        's3.name':'Липосакция','s3.desc':'Удаление локальных жировых отложений.',
-        's4.name':'Маммопластика','s4.desc':'Увеличение, уменьшение или подтяжка груди.',
-        's5.name':'Косметология','s5.desc':'Инъекционная косметология, ботокс, филлеры.',
-        's6.name':'Отопластика','s6.desc':'Коррекция формы и положения ушных раковин.',
-        's7.name':'Мужская интимная пластика','s7.desc':'Коррекция и эстетика мужской интимной зоны.',
-        's8.name':'Женская интимная пластика','s8.desc':'Лабиопластика, вагинопластика.',
-        'price.from':'/ операция','btn.consult':'Консультация',
-        'reviews.tag':'Отзывы','reviews.title':'Что говорят наши клиенты',
-        'r1.text':'"Обратилась на блефаропластику. Результат превзошёл все ожидания."',
-        'r1.service':'Блефаропластика • Алматы',
-        'r2.text':'"После маммопластики прошло уже полгода — я счастлива!"',
-        'r2.service':'Маммопластика • Астана',
-        'r3.text':'"Липосакция зоны живота и боков. Результатом очень доволен."',
-        'r3.service':'Липосакция • Нур-Султан',
-        'r4.text':'"Сделала абдоминопластику после родов. Живот как у девушки!"',
-        'r4.service':'Абдоминопластика • Шымкент',
-        'r5.text':'"Отопластика для сына 14 лет. Ребёнок совсем другой — уверенный, счастливый."',
-        'r5.service':'Отопластика • Астана',
-        'branches.tag':'Адреса','branches.title':'Найдите нас рядом с вами',
-        'branches.sub':'Удобное расположение в центре города. Работаем с 9:00 до 20:00.',
-        'social.tag':'Мы в соцсетях','social.title':'Следите за нами',
-        'social.sub':'Актуальные работы, результаты до/после, акции и полезные материалы',
-        'social.call':'Звонок','social.map':'Найти на карте',
-        'contact.tag':'Контакты','contact.title':'Запишитесь прямо сейчас',
-        'contact.phone':'Телефон','contact.addr':'Адрес',
-        'contact.hours':'Режим работы','contact.hoursVal':'Ежедневно: 9:00 – 20:00',
-        'contact.wa.text':'Хотите быстро записаться? Напишите нам в WhatsApp!',
-        'contact.wa.btn':'WhatsApp — написать',
-        'form.title':'Оставьте заявку','form.name':'Ваше имя','form.phone':'Телефон',
-        'form.service':'Услуга','form.select':'Выберите услугу',
-        'form.message':'Комментарий','form.submit':'Отправить заявку',
-        'footer.tagline':'Клиника пластической хирургии нового поколения.',
-        'footer.services':'Услуги','footer.more':'Ещё','footer.contacts':'Контакты',
-      },
-      kz: {
-        'nav.about':'Біз туралы','nav.services':'Қызметтер','nav.reviews':'Пікірлер',
-        'nav.branches':'Мекенжайлар','nav.contact':'Байланыс','nav.cta':'Жазылу',
-        'hero.badge':'Пластикалық хирургия клиникасы',
-        'hero.title1':'Өзіңізді','hero.title2':'жаңартыңыз',
-        'hero.sub':'Заманауи технологиялар, тәжірибелі хирургтар — бәрі MedCenter-де.',
-        'hero.btn1':'Қызметтерімізді қараңыз','hero.btn2':'Консультация',
-        'hero.card.label':'Сәтті операция','hero.card.years':'Жыл тәжірибе','hero.card.satis':'Қанағаттанған клиент',
-        'about.tag':'Клиника туралы','about.title1':'Біз жасаймыз','about.title2':'жаңа сізді',
-        'about.quote':'"Сұлулық — өзіңізді өзгерту емес, ең жақсы жағыңызды ашу"',
-        'about.body':'MedCenter — Қазақстандағы жаңа буын пластикалық хирургия клиникасы.',
-        'about.btn':'Консультацияға жазылу',
-        'stat.years':'Пластикалық хирургия нарығында',
-        'stat.ops':'Сәтті операция жасалды',
-        'stat.surgeons':'Тәжірибелі хирург',
-        'stat.satis':'Клиент бізді ұсынады',
-        'services.tag':'Қызметтер','services.title':'Біздің мамандықтар',
-        'services.sub':'Хирургиялық және эстетикалық процедуралардың кең ауқымы.',
-        's1.name':'Абдоминопластика','s1.desc':'Іш қабырғасын жою және түзету.',
-        's2.name':'Блефаропластика','s2.desc':'Жоғарғы және төменгі қабақтарды түзету.',
-        's3.name':'Липосакция','s3.desc':'Жергілікті май шөгінділерін жою.',
-        's4.name':'Маммопластика','s4.desc':'Кеудені үлкейту, кішірейту немесе тарту.',
-        's5.name':'Косметология','s5.desc':'Инъекциялық косметология, ботокс, филлерлер.',
-        's6.name':'Отопластика','s6.desc':'Құлақ қабатының пішіні мен орнын түзету.',
-        's7.name':'Ер адамдар интимді пластикасы','s7.desc':'Еркек интимді аймақтың эстетикасы.',
-        's8.name':'Әйелдер интимді пластикасы','s8.desc':'Лабиопластика, вагинопластика.',
-        'price.from':'/ операция','btn.consult':'Консультация',
-        'reviews.tag':'Пікірлер','reviews.title':'Клиенттеріміз не дейді',
-        'r1.text':'"Блефаропластикаға жүгіндім. Нәтиже барлық күтуімнен асып кетті."',
-        'r1.service':'Блефаропластика • Алматы',
-        'r2.text':'"Маммопластикадан кейін алты ай өтті — мен бақыттымын!"',
-        'r2.service':'Маммопластика • Астана',
-        'r3.text':'"Іш пен бүйір аймағының липосакциясы. Нәтижеге өте риза болдым."',
-        'r3.service':'Липосакция • Нұр-Сұлтан',
-        'r4.text':'"Босанғаннан кейін абдоминопластика жасаттым. Керемет нәтиже!"',
-        'r4.service':'Абдоминопластика • Шымкент',
-        'r5.text':'"14 жасар ұлыма отопластика жасалды. Бала мүлдем өзгерді!"',
-        'r5.service':'Отопластика • Астана',
-        'branches.tag':'Мекенжайлар','branches.title':'Бізді жаныңыздан табыңыз',
-        'branches.sub':'Қала орталығында ыңғайлы орналасқан. 9:00-ден 20:00-ге дейін.',
-        'social.tag':'Біз әлеуметтік желілерде','social.title':'Бізді бақылаңыз',
-        'social.sub':'Жұмыс нәтижелері, акциялар және пайдалы материалдар',
-        'social.call':'Қоңырау','social.map':'Картада табу',
-        'contact.tag':'Байланыс','contact.title':'Қазір жазылыңыз',
-        'contact.phone':'Телефон','contact.addr':'Мекенжай',
-        'contact.hours':'Жұмыс уақыты','contact.hoursVal':'Күнде: 9:00 – 20:00',
-        'contact.wa.text':'Жылдам жазылғыңыз келе ме? WhatsApp-та жазыңыз!',
-        'contact.wa.btn':'WhatsApp — жазу',
-        'form.title':'Өтінім қалдырыңыз','form.name':'Есіміңіз','form.phone':'Телефон',
-        'form.service':'Қызмет','form.select':'Қызметті таңдаңыз',
-        'form.message':'Пікір','form.submit':'Өтінімді жіберу',
-        'footer.tagline':'Жаңа буын пластикалық хирургия клиникасы.',
-        'footer.services':'Қызметтер','footer.more':'Тағы','footer.contacts':'Байланыс',
-      },
-      en: {
-        'nav.about':'About','nav.services':'Services','nav.reviews':'Reviews',
-        'nav.branches':'Locations','nav.contact':'Contact','nav.cta':'Book Now',
-        'hero.badge':'Plastic Surgery Clinic',
-        'hero.title1':'Beauty that','hero.title2':'transforms lives',
-        'hero.sub':'Advanced technology, experienced surgeons, and a personalized approach — all at MedCenter.',
-        'hero.btn1':'Our Services','hero.btn2':'Free Consultation',
-        'hero.card.label':'Successful Operations','hero.card.years':'Years Experience','hero.card.satis':'Satisfied Clients',
-        'about.tag':'About Us','about.title1':'We create','about.title2':'a new you',
-        'about.quote':'"Beauty is not about changing yourself, but revealing the best in you"',
-        'about.body':'MedCenter is a next-generation plastic surgery clinic in Kazakhstan with 12+ years of excellence.',
-        'about.btn':'Book a Consultation',
-        'stat.years':'Years in plastic surgery','stat.ops':'Successful operations',
-        'stat.surgeons':'Expert surgeons','stat.satis':'Clients recommend us',
-        'services.tag':'Services','services.title':'Our specializations',
-        'services.sub':'A wide range of surgical and aesthetic procedures with individual approach.',
-        's1.name':'Abdominoplasty','s1.desc':'Tummy tuck and abdominal wall correction.',
-        's2.name':'Blepharoplasty','s2.desc':'Upper and lower eyelid correction.',
-        's3.name':'Liposuction','s3.desc':'Removal of localized fat deposits.',
-        's4.name':'Mammoplasty','s4.desc':'Breast augmentation, reduction or lift.',
-        's5.name':'Cosmetology','s5.desc':'Botox, fillers, mesotherapy, hardware procedures.',
-        's6.name':'Otoplasty','s6.desc':'Ear shape and position correction.',
-        's7.name':'Male Intimate Surgery','s7.desc':'Male intimate aesthetics. Full confidentiality.',
-        's8.name':'Female Intimate Surgery','s8.desc':'Labiaplasty, vaginoplasty, reconstructive surgery.',
-        'price.from':'/ procedure','btn.consult':'Consultation',
-        'reviews.tag':'Reviews','reviews.title':'What our clients say',
-        'r1.text':'"I came for blepharoplasty. The result exceeded all my expectations."',
-        'r1.service':'Blepharoplasty • Almaty',
-        'r2.text':'"Six months after mammoplasty — I\'m so happy with the results!"',
-        'r2.service':'Mammoplasty • Astana',
-        'r3.text':'"Liposuction of abdomen and sides. Extremely satisfied with the outcome."',
-        'r3.service':'Liposuction • Nur-Sultan',
-        'r4.text':'"Had abdominoplasty after childbirth. Amazing result, highly recommend!"',
-        'r4.service':'Abdominoplasty • Shymkent',
-        'r5.text':'"Otoplasty for my 14-year-old son. He\'s a completely different child now!"',
-        'r5.service':'Otoplasty • Astana',
-        'branches.tag':'Locations','branches.title':'Find us near you',
-        'branches.sub':'Conveniently located in the city center. Open daily 9 AM – 8 PM.',
-        'social.tag':'Social Media','social.title':'Follow us',
-        'social.sub':'Before/after results, promotions and useful content',
-        'social.call':'Call Us','social.map':'Find on map',
-        'contact.tag':'Contact','contact.title':'Book right now',
-        'contact.phone':'Phone','contact.addr':'Address',
-        'contact.hours':'Working Hours','contact.hoursVal':'Daily: 9:00 AM – 8:00 PM',
-        'contact.wa.text':'Want to book quickly? Write to us on WhatsApp!',
-        'contact.wa.btn':'WhatsApp — Message Us',
-        'form.title':'Send a Request','form.name':'Your Name','form.phone':'Phone',
-        'form.service':'Service','form.select':'Select a service',
-        'form.message':'Comment','form.submit':'Send Request',
-        'footer.tagline':'Next-generation plastic surgery clinic. Beauty in expert hands.',
-        'footer.services':'Services','footer.more':'More','footer.contacts':'Contacts',
-      }
-    };
-
-    let currentLang = 'ru';
-
-    function setLang(lang) {
-      currentLang = lang;
-      document.querySelectorAll('[data-i18n]').forEach(el => {
-        const key = el.getAttribute('data-i18n');
-        if (i18n[lang] && i18n[lang][key]) el.textContent = i18n[lang][key];
-      });
-      document.querySelectorAll('.lang-btn').forEach(btn => {
-        btn.classList.toggle('active',
-          (lang==='ru' && btn.textContent==='РУС') ||
-          (lang==='kz' && btn.textContent==='ҚАЗ') ||
-          (lang==='en' && btn.textContent==='ENG')
-        );
-      });
-    }
-
-    /* ---- Theme toggle ---- */
-    function toggleTheme() {
-      const body = document.body;
-      body.setAttribute('data-theme', body.getAttribute('data-theme')==='dark' ? 'light' : 'dark');
-    }
-
-    /* ---- Mobile menu ---- */
-    function toggleMenu() {
-      document.getElementById('mobileMenu').classList.toggle('open');
-      document.getElementById('hamburger').classList.toggle('open');
-    }
-
-    /* ---- Loader ---- */
-    window.addEventListener('load', () => {
-      setTimeout(() => {
-        document.getElementById('loader').classList.add('hidden');
-      }, 1400);
-    });
-
-    /* ---- Navbar scroll ---- */
-    window.addEventListener('scroll', () => {
-      document.getElementById('navbar').classList.toggle('scrolled', window.scrollY > 60);
-      document.getElementById('scrollTop').classList.toggle('visible', window.scrollY > 400);
-    });
-
-    /* ---- Scroll reveal (Intersection Observer) ---- */
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); } });
-    }, { threshold: 0.1 });
-    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-    /* ---- Animated counters ---- */
-    function animateCounter(el) {
-      const target = +el.getAttribute('data-counter');
-      const suffix = el.getAttribute('data-suffix') || '';
-      const dur = 1800;
-      const step = 16;
-      const inc = target / (dur / step);
-      let current = 0;
-      const timer = setInterval(() => {
-        current += inc;
-        if (current >= target) { current = target; clearInterval(timer); }
-        el.textContent = Math.floor(current) + suffix;
-      }, step);
-    }
-
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if(e.isIntersecting) {
-          animateCounter(e.target);
-          counterObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.5 });
-    document.querySelectorAll('[data-counter]').forEach(el => counterObserver.observe(el));
-
-    /* ---- Review slider ---- */
-    let slideIndex = 0;
-    const totalSlides = document.querySelectorAll('.review-card').length;
-
-    // Build dots
-    const dotsContainer = document.getElementById('sliderDots');
-    for (let i = 0; i < totalSlides; i++) {
-      const dot = document.createElement('div');
-      dot.className = 'dot' + (i===0?' active':'');
-      dot.onclick = () => goToSlide(i);
-      dotsContainer.appendChild(dot);
-    }
-
-    function goToSlide(idx) {
-      slideIndex = (idx + totalSlides) % totalSlides;
-      document.getElementById('sliderTrack').style.transform = `translateX(-${slideIndex * 100}%)`;
-      document.querySelectorAll('.dot').forEach((d,i) => d.classList.toggle('active', i===slideIndex));
-    }
-
-    function slideReview(dir) { goToSlide(slideIndex + dir); }
-
-    // Auto-play
-    setInterval(() => slideReview(1), 5000);
-
-    /* ---- Form submit ---- */
-    function submitForm() {
-      const name = document.getElementById('fname').value.trim();
-      const phone = document.getElementById('fphone').value.trim();
-      if (!name || !phone) {
-        alert('Пожалуйста, заполните имя и телефон.');
-        return;
-      }
-      const toast = document.getElementById('toast');
-      toast.classList.add('show');
-      setTimeout(() => toast.classList.remove('show'), 3500);
-      document.getElementById('fname').value='';
-      document.getElementById('fphone').value='';
-      document.getElementById('fmessage').value='';
-    }
-  </script>
-
 </body>
 </html>
